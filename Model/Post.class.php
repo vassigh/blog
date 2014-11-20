@@ -8,6 +8,7 @@ class Model_Post
     {
         $this->db = new Helper_Database();
 
+
     }
     public function getPost($id)
     {
@@ -56,4 +57,5 @@ class Model_Post
     //$id=$db->execute("update clients SET auteur=?, titre=?, contenu?, where ident = 3", array("Dupont"));
 
 }
+
 
