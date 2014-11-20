@@ -1,0 +1,102 @@
+
+/* ------------------------------------ */
+/*        CSS  --                     	*/
+/* ------------------------------------ */
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v11/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+
+}
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pinyon Script'), local('PinyonScript'), url(http://fonts.gstatic.com/s/pinyonscript/v6/TzghnhfCn7TuE73f-CBQ0BEVhAA1gnTRu3Am0EzDRlM.woff) format('woff');
+}
+
+
+
+
+@font-face {
+    font-family: "Ma Super Fonte";
+    src: url('MaSuperFonte-Regular.ttf');
+}
+@font-face {
+    font-family: "Ma Super Fonte";
+    font-style: italic;
+    src: url('MaSuperFonte-Italic.ttf');
+}
+@font-face {
+    font-family: "Ma Super Fonte";
+    font-weight: bold;
+    src: url('MaSuperFonte-Bold.ttf');
+}
+
+/*
+body {
+    font-family: "Ma Super Fonte", Helvetica, Arial, sans-serif;
+}
+
+*/
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    /* Utilisera MaSuperFonte-Bold.ttf */
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+h2 {
+    /* Utilisera MaSuperFonte-Italic.ttf */
+    font-style: italic;
+    font-weight: normal;
+}
+h3 {
+    /* Utilisera ??? (fonte bold italic non chargée!) */
+    font-style: italic;
+    font-weight: bold;
+}
+p {
+    /* Utilisera MaSuperFonte-Regular.ttf */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+div{
+  margin-bottom: 50px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: red;
+}
+
+.titre{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10pt;
+}
+.texte{
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12pt;
+}
+
+.contenu{
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14pt;
+  padding-left: 20px;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
