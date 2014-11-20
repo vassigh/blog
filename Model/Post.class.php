@@ -47,7 +47,8 @@ class Model_Post
 
     public function updatePost($id, $auteur, $titre, $contenu, $categorie)
     {
-        $id=$this->db->execute("update news SET auteur=?, titre=?, contenu?, categorie=? where id = $id", array("$auteur", "$titre", "$contenu","$categorie" ));
+         var_dump($id);
+        $id=$this->db->execute("update news SET auteur=?, titre=?, contenu=?, categorie=? where id = $id", array("$auteur", "$titre", "$contenu","$categorie" ));
         return $id;
 
     }
