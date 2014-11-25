@@ -1,8 +1,5 @@
 <?php
 
-include 'includes/autoload.php';
-
-$db = new Helper_Database();
-
-include 'post.phtml';
-
+require_once ('includes/autoload.php');
+$users = new Model_Post();
+include 'post.php';

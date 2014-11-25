@@ -19,8 +19,6 @@
 }
 
 
-
-
 @font-face {
     font-family: "Ma Super Fonte";
     src: url('MaSuperFonte-Regular.ttf');
@@ -35,6 +33,7 @@
     font-weight: bold;
     src: url('MaSuperFonte-Bold.ttf');
 }
+
 
 
 body {
@@ -65,20 +64,138 @@ p {
 }
 
 
+/* =============================================================== */
+/* Blog : liste des news; 
+/* =============================================================== */
+
+
+.section_blog_liste_news {
+    display: -webkit-flex;
+    display: Flex;
+    padding: 0;
+    align-items:stretch;
+    padding-left: 2%;
+    margin-top: 60px;
+}
+
+.div_blog_liste_news{
+  width: 25%;
+  height: 600px;
+  margin-right: 2%;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: #7e7975;
+  border-radius: 5px;
+  padding: 8px;
+  background: #d7d2cf;
+}
+
+
+.categorie_blog_liste_news{
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blog_liste_news_page{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.titre_blog_liste_news{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.texte_blog_liste_news{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-top: 0px;
+}
+
+.date_blog_liste_news{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  margin-top: 10px;
+}
+
+.image_blog_liste_news{
+  float: left;
+  width:20%;
+  height: 50px;
+  margin-right: 5px;
+}
+
+
+.blog_contenu_news_retour{
+  padding-left: 50%;
+}
+
+.tags_blog_liste_news{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.blog_liste_news_page a{
+  text-decoration: none;
+}
+
+.formulaire_tri{
+  text-align: center;
+}
+
+.formulaire_tri a{
+  text-decoration: none;
+}
+
+.formulaire_tri a:hover{
+  color: red;
+}
+
+
+/* =============================================================== */
+/* Administration 
+/* =============================================================== */
+
+.section_admin_blog{
+  padding-left: 0px;
+}
+
+.formulaire_admin{
+  margin-left: 0px;
+}
+
+.ad_lib_1{
+  display: inline-block;
+  width: 100px;
+  }
+
 div{
-  margin-bottom: 50px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: red;
+  margin-bottom: 10px;
 }
 
 .titre{
   font-style: normal;
   font-weight: bold;
   font-size: 10pt;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 .texte{
-   font-style: normal;
+  font-style: normal;
   font-weight: bold;
   font-size: 12pt;
 }
@@ -87,28 +204,32 @@ div{
   font-style: italic;
   font-weight: normal;
   font-size: 14pt;
-  padding-left: 20px;
+  padding-left: 0px;
+  text-align: justify;
 }
 
+
+.date{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  margin-top: -15px;
+}
+
+
 table{
-  width: 800px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 .ad_tr_liste{
   color: red;
 }
 
-.ad_td_auteur{
-  width:15%;
-  font-size: 12pt;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-}
 
 .ad_td_titre{
   width:25%;
-  font-size: 12pt;
+  font-size: 10pt;
   text-align: center;
   border-style: solid;
   border-width: 2px;
@@ -117,7 +238,7 @@ table{
 
 .ad_td_cetegorie{
   width:5%;
-  font-size: 12pt;
+  font-size: 10pt;
   text-align: center;
   border-style: solid;
   border-width: 2px;
@@ -125,8 +246,8 @@ table{
 }
 
 .ad_td_date_ajout{
-  width:25%;
-  font-size: 12pt;
+  width:20%;
+  font-size: 10pt;
   text-align: center;
   border-style: solid;
   border-width: 2px;
@@ -134,22 +255,136 @@ table{
 }
 
 .ad_td_date_modif{
-  width:25%;
-  font-size: 12pt;
+  width:20%;
+  font-size: 10pt;
   text-align: center;
   border-style: solid;
   border-width: 2px;
   border-color: black;
 }
 
-.ad_td_action{
-  width:5%;
+.ad_td_image{
+  width:10%;
   font-size: 12pt;
   text-align: center;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  padding-left: 10px;
+}
+
+.ad_td_action{
+  width:5%;
+  font-size: 10pt;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+
+.textarea{
+  text-align: left;
+}
+
+
+/* =============================================================== */
+/* Contenu d'un blog 
+/* =============================================================== */
+
+.section_blog_contenu_news{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 80px;
+}
+
+
+.contenu_image{
+  float: left;
+  width:50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.contenu_titre{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-top: 2px;
+}
+
+.blog_contenu_news{
+  width: 100%;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: #7e7975;
+  border-radius: 5px;
+  padding: 8px;
+  background: #d7d2cf;
+}
+
+
+/* =============================================================== */
+/* LOGON
+/* =============================================================== */
+
+.login{
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.login label{
+  display: inline-block;
+  width: 200px;
+}
+
+.rouge{
+  color:red;
+}
+
+.back_rouge{
+  background:red;
+}
+
+/* =============================================================== */
+/* REGISTER COMPTE 
+/* =============================================================== */
+
+.margin_left{
+  margin-left: 50px;
+}
+
+
+/* =============================================================== */
+/* 
+/* =============================================================== */
 
 
 
+.image{
+  float: left;
+  width:50px;
+  height: 50px;
+  margin-right: 5px;
+}
 
+.contenu_image{
+  float: left;
+  width:50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.contenu_titre{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+
+/* =============================================================== */
+/* Commentaires 
+/* =============================================================== */
+
+.commentaire_retour{
+  margin-left: 100px;
+}
