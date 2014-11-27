@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="blog.css">
     <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
   </head>
   
   <body>
@@ -129,7 +130,7 @@
                    ?>"/><br /><br />
 
           
-            Contenu :<br /><textarea rows="8" cols="97" name="contenu"><?php
+            Contenu :<br /><textarea rows="40" cols="97" name="contenu"><?php
 
                         if ($bouton_modif == 'o')
                         { 
@@ -201,7 +202,7 @@
 
     </section>
 
-
+  <script>tinymce.init({selector:'textarea'});</script>
   </body>
 </html>
 

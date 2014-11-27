@@ -1,0 +1,114 @@
+
+											-------------------------
+											-------------------------
+											-------------------------
+											-------------------------
+											codes utils php javascrpt
+											-------------------------
+											-------------------------
+											-------------------------
+											-------------------------
+
+-------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------
+calendrier persan
+--------------------------------------------------
+
+
+<?php
+require_once("PersianCalendar.php");
+
+echo mds_date("Y/m/d", "now", 1); // ۱۳۸۲/۰۸/۰۵
+echo mds_date("l j F Y";, make_time(0,0,0,6,30,1998), 1); //پنجشنبه ۱۱ دي ۱۳۴۸
+echo mds_date("l j F Y , i : H", time(), 0); //سه شنبه 15 مرداد 1387 , 20 : 07
+?>
+
+/*
+Introduction
+
+With this PHP script, you can generate Persian Calendar PHP easily.
+Background
+
+This script was created by Jalali and I just modified it and submit it here.
+Using the Code
+Persian calendar functions:
+Collapse | Copy Code
+
+function mds_date($format, $when="now", $persianNumber = 0) 
+
+parameters:
+
+    $format: Format of ouput date
+    $when: Time of calendar into the second, if it sets "now", the mds_date function shows current date
+    $persianNumber: If you want to print numbers into the Persian numbers, set it to 1 else set it to zero
+
+returns:
+
+    string of solar date
+
+Sample:
+Collapse | Copy Code
+
+<?php
+require_once("PersianCalendar.php");
+
+echo mds_date("Y/m/d", "now", 1); // ۱۳۸۲/۰۸/۰۵
+echo mds_date("l j F Y";, make_time(0,0,0,6,30,1998), 1); //پنجشنبه ۱۱ دي ۱۳۴۸
+echo mds_date("l j F Y , i : H", time(), 0); //سه شنبه 15 مرداد 1387 , 20 : 07
+?>
+
+فرمت 	خروجی 	مثال
+A 	قبل‏ازظهر و یا بعدازظهر را نشان می دهد 	قبل‏ازظهر - بعدازظهر
+a 	ق.ظ و یا ب.ظ را نشان می دهد 	ق.ظ - ب.ظ
+d 	چندمین روز از ماه را به صورت عدد دورقمی 	01 - 02 - 03 - ... -31
+D 	نام روز هفته را با یک کلمه 	ی - د - ... - ج
+F 	نام کامل ماه 	فروردین - اردیبهشت - ... - اسفتد
+g 	نمایش ساعت به صورت 12 ساعته 	1 - 2 - 3 - ... - 12
+G 	نمایش ساعت به صورت 24 ساعته 	0 - 1 - 2 - ... - 23
+h 	نمایش ساعت به صورت 12 ساعته دورقمی 	01 - 02 - ... - 12
+H 	نمایش ساعت به صورت 24 ساعته دو رقمی 	00 - 01 - 02 - ... - 23
+i 	نمایش دقیقه 	00 - 01 - 02 - ... - 59
+l(lower L) 	نمایش روزهای ماه به صورت عدد 	1 - 2 - ... - 12
+m 	نمایش ماه به صورت عدد دورقمی 	01 - 02 - ... - 12
+n 	نمایش ماه به صورت عدد 	0 - 1 - 2 - ... - 12
+s 	نمایش ثانیه یک دقیقه 	01 - 02 - ... - 59
+t 	تعداد روزها مشخص شده ماه (خورشیدی) 	29
+w 	چندمین روز هفته به صورت یک عدد تک رقمی 	0(یکشنبه) - 1 - 2 - ... - 6
+y 	نمایش سال به صورت عدد دورقمی 	81 - 82 - ...
+Y 	نمایش سال به صورت عدد چهار رقمی 	1381 - 1382 - 1383 - ...
+Collapse | Copy Code
+
+function make_time($hour="", $minute="", $second="", $Dmonth="" , $Dday="", $Dyear="")
+
+This function is like mktime function in PHP.
+
+parameters:
+
+    $hour: The number of the hour
+    $minute: The number of the minute
+    $second: The number of seconds past the minute
+    $Dmonth: The number of the month (in solar calendar) ( $Dmonth <= 11)
+    $Dmonth: The number of the month (in solar calendar)
+    $Dyear: The number of the month (in solar calendar)
+
+returns:
+
+    The Unix timestamp corresponding to the arguments given
+
+Sample:
+Collapse | Copy Code
+
+<?php
+require_once("PersianCalendar.php");
+
+echo make_time(59, 59, 23, 11, 18, 1380); // 1013255963
+echo make_time(80, 110, 54, 10, 60, 1362); //446291454
+?>
+
+
+
+
+----------------------------------------------------
+----------------------------------------------------

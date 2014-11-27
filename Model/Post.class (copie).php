@@ -42,26 +42,47 @@ class Model_Post
         return $nom;
     }
 
-    public function getLatestPosts($number=0, $offset=0, $date_cherche='', $categorie=0)
+    public function getLatestPosts($number=0, $offset=0, $date_cherche='')
     {
         if ($number == 0)
         {
             $nom=$this->db->query("select * from news 
-                       left join categories on categories.type = news.categorie 
-                        WHERE dateAjout LIKE ? " .($categorie==0 ? "" : "And categories.type = $categorie"). " 
+                       inner join categories on categories.id_categorie = news.categorie
+                        WHERE dateAjout LIKE ?
                         order by dateAjout desc", array($date_cherche.'%'));
         }
         else
         {
             $nom=$this->db->query("select * from news 
-                       left join categories on categories.type = news.categorie 
-                        WHERE dateAjout LIKE ? " .($categorie==0 ? "" : "And categories.type = $categorie"). " 
+                       inner join categories on categories.id_categorie = news.categorie
+                        WHERE dateAjout LIKE ?
                        order by dateAjout desc limit $number offset $offset", array($date_cherche.'%'));
 
         }
         return $nom;
     }
 
+/*
+    public function getLatestPosts($number=0, $offset=0, $categorie='')
+    {
+        if ($number == 0)
+        {
+            $nom=$this->db->query("select * from news 
+                        inner join categories on categories.id_categorie = news.categorie && categories.type = $categorie 
+                        order by dateAjout desc", array(""));
+        }
+        else
+        {
+            $nom=$this->db->query("select * from news 
+                       inner join categories on categories.id_categorie = news.categorie 
+                        inner join categories on categories.id_categorie = news.categorie && categories.type = $categorie 
+                       order by dateAjout desc limit $number offset $offset", array(""));
+
+        }
+        return $nom;
+    }
+
+*/
 
     public function insertPost($id_auteur, $titre, $contenu, $categorie)
     {
@@ -133,6 +154,31 @@ class Model_Post
         return $nom;
     }
 
+/*
+    caduc : remplacé par la fonction group_contact
+    public function getTagsFormate($id_news)
+    {
+      $tag_format = "";
+      $tags=$this->getLatestTags($id_news);
+      if ($tags != null)
+      {
+        for ($i_tag=0; $i_tag<count($tags); $i_tag++)
+        {
+          if ($i_tag == 0)
+          {
+
+            $tag_format = $tags[$i_tag]['tag'];   
+           }
+          else
+          {
+            $tag_format .= ', '  . $tags[$i_tag]['tag']; 
+           };
+        };
+      };
+      return $tag_format;
+    }
+
+*/
     public function getTagsFormate($id_news)
     {
       $tag_format2=$this->db->queryOne("select GROUP_CONCAT( `tag` ) as tag from tags
@@ -149,5 +195,14 @@ class Model_Post
         return $id;
     }
 
+    public function updateTag($id_news, $lib_tag)
+    {
+
+
+
+
+    //    $id=$this->db->execute("update tags SET titre=?, contenu=?, categorie=?, dateModif=CURRENT_TIMESTAMP where id = $id", array("$titre", "$contenu","$categorie" ));
+    //    return $id;
+    }
 
 }

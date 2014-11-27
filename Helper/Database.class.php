@@ -14,6 +14,8 @@ class Helper_Database
         $this->db = new PDO( $dns . "; dbname=" . $dbname , $user,  $password);
 
         $this->db->exec("SET NAMES UTF8");
+        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+
         // $this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);  // cela ne marche pas pour limit à voir
 
     }
